@@ -1,0 +1,44 @@
+Directory hierarchy
+
+project/
+├── app/
+│   ├── api/                # Route API (opzionale)
+│   ├── (dashboard)/        # Gruppo di route (facoltativo per organizzare sezioni)
+│   │   ├── page.tsx        # Entry point di una sezione
+│   │   ├── settings/       # Sotto-sezione
+│   │   │   ├── page.tsx
+│   │   │   └── component.tsx
+│   ├── layout.tsx          # Layout globale
+│   ├── page.tsx            # Homepage
+│   ├── about/              # Cartella per la pagina "About"
+│   │   ├── page.tsx
+│   │   └── components/     # Componenti specifici per questa pagina
+│   │       └── AboutCard.tsx
+│   ├── blog/               # Sezione blog
+│   │   ├── [slug]/         # Dynamic route per i post
+│   │   │   └── page.tsx
+│   │   ├── page.tsx        # Pagina index del blog
+│   │   └── components/     # Componenti specifici del blog
+│   └── styles/             # Stili condivisi o relativi a pagine
+├── components/             # Componenti globali
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+├── public/                 # Risorse pubbliche (immagini, icone, font, ecc.)
+├── styles/                 # Stili globali (Tailwind, CSS o SCSS)
+│   └── globals.css
+├── utils/                  # Funzioni helper e utility
+├── middleware.ts           # Middleware globale (opzionale)
+├── next.config.js          # Configurazione Next.js
+└── tsconfig.json           # Configurazione TypeScript
+
+Page hierarchy
+
+app/
+├── blog/
+│   ├── page.tsx          # Pagina principale del blog
+│   ├── components/
+│   │   └── BlogList.tsx  # Componente per la lista dei post
+│   ├── [slug]/
+│   │   ├── page.tsx      # Pagina dinamica per ogni post
+│   │   └── components/
+│   │       └── PostContent.tsx  # Componente specifico per il contenuto del post
