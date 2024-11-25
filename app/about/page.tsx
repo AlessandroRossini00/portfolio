@@ -20,7 +20,7 @@ export default function About() {
                 <meta property="og:image" content="/images/og-image.jpg" />
                 <meta property="og:url" content="https://example.com/about" />
             </Head>
-            <main className="py-8 flex flex-col">
+            <main className="py-8 flex flex-col bg-blue-700">
                 <AboutMe />
                 <Social />
                 <CardList />
