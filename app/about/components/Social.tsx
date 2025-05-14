@@ -21,7 +21,15 @@ export default function Social() {
   );
 }
 
-const LinkIcon = ({ src, alt, href }: any) => {
+const LinkIcon = ({
+  src,
+  alt,
+  href,
+}: {
+  src: string;
+  alt: string;
+  href: string;
+}) => {
   return (
     <a
       href={href}

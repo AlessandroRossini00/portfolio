@@ -55,7 +55,15 @@ export default function CardList() {
   );
 }
 
-function Card({ image, title, description }: any) {
+function Card({
+  image,
+  title,
+  description,
+}: {
+  image: string;
+  title: string;
+  description: string[];
+}) {
   return (
     <article className="flex flex-col bg-blue-500 border-white border-2 justify-start items-center shadow-md rounded-xl overflow-hidden">
       <div className="rounded-full bg-white p-4 m-2">
@@ -70,7 +78,7 @@ function Card({ image, title, description }: any) {
       </div>
       <div className="p-4 flex flex-col justify-center items-center">
         <h3 className="text-lg font-bold text-blue-800 mb-2">{title}</h3>
-        {description.map((item: any, index: any) => (
+        {description.map((item: string, index: number) => (
           <p key={index} className="text-sm m-2">
             {item}
           </p>
